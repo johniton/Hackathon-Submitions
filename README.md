@@ -4,7 +4,7 @@
 
 1. Fork this repository
 2. Create a folder:
-   TeamName_ProjectName
+   TeamName_ProjectName_PS#
 3. Add:
    - README.md
    - presentation
