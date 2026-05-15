@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Source+Sans+Pro:400,400i" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #fff;
+  font-size: 13px;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #333;
+}
+.page {
+  max-width: 700px;
+  min-height: 29.7cm;
+  margin: 0 auto;
+  background: white;
+  padding: 30px 50px;
+}
+h1 {
+  font-weight: 300;
+  margin: 0;
+  font-size: 36px;
+  color: #ba0018;
+  padding: 0 0 8px;
+  font-family: 'Merriweather', serif;
+}
+h2 {
+  color: #ba0018;
+  width: 130px;
+  font-size: 15px;
+  padding-left: 0;
+  padding-top: 10px;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 22px;
+  font-family: 'Merriweather', serif;
+}
+a { color: #ba0018; text-decoration: none; padding: 2px 0; }
+a:hover { text-decoration: underline; }
+.key:first-child { margin-left: 0; }
+.key::before { content: '◆'; position: absolute; left: -14px; color: #888; font-size: 7pt; }
+.key:first-child::before { content: ''; }
+.key { margin: 0 10px; position: relative; font-size: 13px; }
+.section { border-bottom: 1px solid #ddd; padding: 12px 0 16px; }
+.section:last-child { border: none; }
+.section-text {
+  width: 78%;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 8px 0;
+  padding: 0 10px;
+}
+.subsection { margin: 6px 0 4px; }
+.desc { font-size: 13px; font-family: 'Source Sans Pro', sans-serif; color: #444; line-height: 20px; }
+.contact-info { font-size: 13px; text-align: right; line-height: 22px; }
+.light { color: #999; letter-spacing: 0.5px; font-size: 12px; line-height: 22px; text-transform: uppercase; }
+.emph { font-weight: 700; }
+.row:before, .row:after { content: ""; display: table; }
+.row:after { clear: both; }
+.col { float: left; }
+.col-right { float: right; }
+ul { padding-left: 16px; margin: 4px 0; }
+li { font-size: 12px; margin-bottom: 3px; color: #444; line-height: 18px; }
+.chip {
+  display: inline-block;
+  background: #fce4ec;
+  color: #ba0018;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin: 2px 3px;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="section row">
+    <h1 class="col">{{NAME}}</h1>
+    <div class="contact-info col-right">
+      {{CONTACT_BLOCK}}
+    </div>
+  </div>
+
+  {{SUMMARY_SECTION}}
+  {{SKILLS_SECTION}}
+  {{EXPERIENCE_SECTION}}
+  {{EDUCATION_SECTION}}
+  {{PROJECTS_SECTION}}
+  {{CERTIFICATIONS_SECTION}}
+  {{ACHIEVEMENTS_SECTION}}
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Montserrat', Arial, sans-serif; font-size: 10pt; color: #1a1a1a; background: #fff; padding: 0; }
+  .page { width: 210mm; min-height: 297mm; }
+
+  /* Big name header */
+  .header { background: #e8000d; padding: 10mm 14mm; }
+  .header-name { font-size: 26pt; font-weight: 900; color: #fff; letter-spacing: -0.5px; line-height: 1.1; }
+  .header-headline { font-size: 11pt; font-weight: 500; color: rgba(255,255,255,0.85); margin-top: 1.5mm; letter-spacing: 0.5px; }
+
+  /* Contact bar */
+  .contact-bar { background: #111; display: flex; gap: 0; flex-wrap: wrap; }
+  .contact-item { padding: 2.5mm 5mm; border-right: 1px solid #333; font-size: 7.5pt; color: #fff; white-space: nowrap; }
+  .contact-item a { color: #e8000d; text-decoration: none; }
+
+  /* Body */
+  .body { padding: 8mm 14mm; }
+  .body-section { margin-bottom: 5mm; }
+  .body-section-title { font-size: 8pt; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; color: #e8000d; border-bottom: 1.5mm solid #111; padding-bottom: 1.5mm; margin-bottom: 3mm; }
+
+  .summary-text { font-size: 9.5pt; color: #333; line-height: 1.7; font-weight: 400; }
+
+  .exp-item { margin-bottom: 4mm; }
+  .exp-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5mm; }
+  .exp-company { font-size: 11pt; font-weight: 800; color: #111; }
+  .exp-dates { font-size: 7.5pt; color: #e8000d; font-weight: 700; text-transform: uppercase; }
+  .exp-title { font-size: 9pt; color: #555; font-weight: 600; margin-bottom: 1.5mm; }
+  .exp-bullets { padding-left: 0; }
+  .exp-bullets li { font-size: 8.5pt; color: #333; line-height: 1.6; margin-bottom: 1.5mm; list-style: none; padding-left: 4mm; position: relative; font-weight: 400; }
+  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: #e8000d; font-weight: 700; }
+
+  .edu-item { margin-bottom: 3mm; }
+  .edu-header { display: flex; justify-content: space-between; }
+  .edu-school { font-size: 10.5pt; font-weight: 700; color: #111; }
+  .edu-dates { font-size: 7.5pt; color: #888; font-weight: 500; }
+  .edu-degree { font-size: 8.5pt; color: #444; font-weight: 500; }
+
+  .proj-item { margin-bottom: 3mm; }
+  .proj-name { font-size: 10pt; font-weight: 700; color: #111; }
+  .proj-stack { font-size: 7pt; color: #e8000d; font-weight: 700; }
+  .proj-desc { font-size: 8.5pt; color: #333; line-height: 1.6; margin-top: 1mm; }
+  .proj-url { font-size: 7.5pt; color: #888; }
+
+  .skill-pill { display: inline-block; background: #111; color: #fff; font-size: 7.5pt; font-weight: 600; padding: 1mm 2.5mm; margin: 0.5mm 1mm 0.5mm 0; text-transform: uppercase; letter-spacing: 0.5px; }
+  .skill-category { font-size: 7.5pt; font-weight: 800; color: #111; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1mm; }
+  .skill-row { margin-bottom: 2mm; }
+
+  .cert-item { margin-bottom: 2.5mm; border-left: 3px solid #e8000d; padding-left: 2.5mm; }
+  .cert-name { font-size: 9pt; font-weight: 700; color: #111; }
+  .cert-meta { font-size: 7.5pt; color: #666; }
+
+  .ach-item { font-size: 8.5pt; color: #333; line-height: 1.5; margin-bottom: 1.5mm; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <div class="header-name">{{NAME}}</div>
+    <div class="header-headline">{{HEADLINE}}</div>
+  </header>
+
+  <div class="contact-bar">
+    {{CONTACT_BAR_ITEMS}}
+  </div>
+
+  <div class="body">
+    {{MAIN_CONTENT}}
+  </div>
+</div>
+</body>
+</html>

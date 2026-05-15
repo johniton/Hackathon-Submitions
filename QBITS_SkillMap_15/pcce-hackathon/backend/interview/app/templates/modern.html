@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', Arial, sans-serif; font-size: 10.5pt; color: #1a1a2e; background: #fff; padding: 0; }
+  .page { width: 210mm; min-height: 297mm; padding: 0; display: flex; }
+
+  /* Two column layout */
+  .sidebar { width: 65mm; background: #0d4a3a; color: #e8f5f0; padding: 18mm 10mm; flex-shrink: 0; }
+  .main { flex: 1; padding: 15mm 14mm; }
+
+  /* Sidebar content */
+  .side-name { font-size: 20pt; font-weight: 700; color: #fff; margin-bottom: 2mm; line-height: 1.2; }
+  .side-headline { font-size: 9pt; color: #7dcbb0; font-weight: 500; margin-bottom: 8mm; line-height: 1.4; }
+  .side-divider { height: 0.5mm; background: #3a8f72; margin: 5mm 0; }
+
+  .side-section-title { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.5px; color: #7dcbb0; font-weight: 600; margin-bottom: 3mm; }
+  .side-contact-item { margin-bottom: 2mm; font-size: 8.5pt; line-height: 1.4; }
+  .side-contact-item a { color: #b8e0d2; text-decoration: none; }
+  .side-contact-item .label { font-size: 7pt; color: #7dcbb0; display: block; }
+
+  .side-skill-tag { display: inline-block; background: #0a3d2e; color: #c8e6dd; font-size: 7.5pt; padding: 1.5mm 2.5mm; border-radius: 1mm; margin: 0.5mm 1mm 0.5mm 0; font-weight: 400; }
+  .skill-group { margin-bottom: 3mm; }
+
+  .side-cert { margin-bottom: 3mm; }
+  .side-cert-name { font-size: 8.5pt; font-weight: 600; color: #fff; }
+  .side-cert-issuer { font-size: 7.5pt; color: #7dcbb0; margin-top: 0.5mm; }
+  .side-cert-date { font-size: 7pt; color: #5a9e85; }
+
+  .side-ach-item { font-size: 8pt; color: #b8e0d2; margin-bottom: 1.5mm; padding-left: 3mm; position: relative; line-height: 1.4; }
+  .side-ach-item::before { content: '▸'; position: absolute; left: 0; color: #3a8f72; }
+
+  /* Main content */
+  .main-section { margin-bottom: 5mm; }
+  .main-section-title { font-size: 8pt; text-transform: uppercase; letter-spacing: 2px; color: #0d4a3a; font-weight: 700; border-bottom: 0.75mm solid #0d4a3a; padding-bottom: 1mm; margin-bottom: 3mm; }
+
+  .main-headline { font-size: 13pt; font-weight: 600; color: #0d4a3a; margin-bottom: 1.5mm; }
+  .main-summary { font-size: 9pt; color: #3d3d5c; line-height: 1.55; margin-bottom: 5mm; }
+
+  .exp-item { margin-bottom: 4mm; }
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5mm; }
+  .exp-company { font-size: 10pt; font-weight: 700; color: #1a1a2e; }
+  .exp-dates { font-size: 8pt; color: #6a6a8a; font-weight: 400; }
+  .exp-title { font-size: 9pt; color: #0d4a3a; font-weight: 500; font-style: italic; margin-bottom: 1.5mm; }
+  .exp-bullets { padding-left: 4mm; }
+  .exp-bullets li { font-size: 8.5pt; color: #2d2d4a; line-height: 1.5; margin-bottom: 1mm; list-style-type: disc; }
+
+  .edu-item { margin-bottom: 3mm; }
+  .edu-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu-school { font-size: 10pt; font-weight: 600; color: #1a1a2e; }
+  .edu-dates { font-size: 8pt; color: #6a6a8a; }
+  .edu-degree { font-size: 8.5pt; color: #3d3d5c; font-weight: 500; }
+
+  .proj-item { margin-bottom: 3mm; }
+  .proj-name { font-size: 9.5pt; font-weight: 700; color: #1a1a2e; }
+  .proj-stack { font-size: 7.5pt; color: #0d4a3a; font-weight: 600; display: inline; }
+  .proj-desc { font-size: 8.5pt; color: #3d3d5c; line-height: 1.5; margin-top: 1mm; }
+  .proj-url { font-size: 7.5pt; color: #6a6a8a; }
+</style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <div class="side-name">{{NAME}}</div>
+    <div class="side-headline">{{HEADLINE}}</div>
+    <div class="side-divider"></div>
+
+    <div class="side-section">CONTACT</div>
+    <div class="side-contact-item"><span class="label">Email</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+    <div class="side-contact-item"><span class="label">Phone</span>{{PHONE}}</div>
+    <div class="side-contact-item"><span class="label">Location</span>{{LOCATION}}</div>
+    <div class="side-contact-item"><span class="label">LinkedIn</span>{{LINKEDIN_DISPLAY}}</div>
+    <div class="side-contact-item"><span class="label">GitHub</span>{{GITHUB_DISPLAY}}</div>
+
+    <div class="side-divider"></div>
+
+    <div class="side-section">SKILLS</div>
+    {{SIDEBAR_SKILLS}}
+
+    <div class="side-divider"></div>
+
+    <div class="side-section">CERTIFICATIONS</div>
+    {{SIDEBAR_CERTS}}
+
+    <div class="side-divider"></div>
+
+    <div class="side-section">ACHIEVEMENTS</div>
+    {{SIDEBAR_ACHIEVEMENTS}}
+  </aside>
+
+  <main class="main">
+    {{MAIN_CONTENT}}
+  </main>
+</div>
+</body>
+</html>

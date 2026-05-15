@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Source+Sans+Pro:400,400i,600,700" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #fff;
+  font-size: 13px;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #333;
+}
+.page {
+  max-width: 700px;
+  min-height: 29.7cm;
+  margin: 0 auto;
+  background: white;
+  padding: 28px 44px;
+}
+
+/* ─── Header ─── */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2.5px solid #2c3e50;
+  padding-bottom: 14px;
+  margin-bottom: 8px;
+}
+h1 {
+  font-weight: 300;
+  font-size: 34px;
+  color: #2c3e50;
+  font-family: 'Merriweather', serif;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+h1 strong { font-weight: 700; }
+.contact-info {
+  font-size: 12px;
+  text-align: right;
+  line-height: 22px;
+  color: #555;
+  padding-top: 4px;
+}
+.contact-info a { color: #2c3e50; text-decoration: none; font-weight: 600; }
+.contact-info a:hover { text-decoration: underline; }
+
+/* ─── Section Layout ─── */
+.section {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0 14px;
+}
+.section:last-child { border: none; }
+.section-label {
+  width: 130px;
+  min-width: 130px;
+  padding-top: 2px;
+  padding-right: 16px;
+}
+.section-label h2 {
+  color: #2c3e50;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.section-content {
+  flex: 1;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+/* ─── Entry Blocks ─── */
+.entry { margin-bottom: 12px; }
+.entry:last-child { margin-bottom: 0; }
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.entry h3 {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+  color: #2c3e50;
+  line-height: 22px;
+  margin-bottom: 1px;
+}
+.entry-role {
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+.entry-date {
+  color: #999;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.entry-loc {
+  color: #888;
+  font-size: 11px;
+}
+.entry-desc {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 19px;
+  margin-top: 3px;
+}
+
+/* ─── Lists ─── */
+ul { padding-left: 15px; margin: 4px 0 0; }
+li { font-size: 12px; margin-bottom: 3px; color: #444; line-height: 18px; }
+
+/* ─── Skills / Keys ─── */
+.key { margin: 0 8px; position: relative; font-size: 13px; }
+.key::before {
+  content: '◆';
+  position: absolute;
+  left: -13px;
+  color: #999;
+  font-size: 6pt;
+}
+.key:first-child { margin-left: 0; }
+.key:first-child::before { content: ''; }
+
+/* ─── Chips ─── */
+.chip {
+  display: inline-block;
+  background: #ecf0f1;
+  color: #2c3e50;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  margin: 2px 3px;
+  font-weight: 600;
+}
+.emph { font-weight: 700; }
+.desc { font-size: 12.5px; color: #444; line-height: 19px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header-row">
+    <h1>{{NAME}}</h1>
+    <div class="contact-info">
+      {{CONTACT_BLOCK}}
+    </div>
+  </div>
+
+  {{SUMMARY_SECTION}}
+  {{SKILLS_SECTION}}
+  {{EXPERIENCE_SECTION}}
+  {{EDUCATION_SECTION}}
+  {{PROJECTS_SECTION}}
+  {{CERTIFICATIONS_SECTION}}
+  {{ACHIEVEMENTS_SECTION}}
+</div>
+</body>
+</html>

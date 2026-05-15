@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  color: #1e293b;
+  background: #fff;
+  line-height: 1.5;
+}
+.page { max-width: 700px; margin: 0 auto; }
+.header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 28px 40px 22px;
+}
+.header h1 { font-size: 30px; font-weight: 800; letter-spacing: 1px; }
+.header .headline { font-size: 13px; color: #94a3b8; margin-top: 2px; font-weight: 400; }
+.header .contact { font-size: 11px; color: #64748b; margin-top: 8px; }
+.header .contact a { color: #60a5fa; text-decoration: none; }
+.body-content { padding: 20px 40px 30px; }
+.section { margin-bottom: 18px; }
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0f172a;
+  border-bottom: 2.5px solid #0f172a;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+.entry { margin-bottom: 12px; }
+.entry-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.entry-title { font-weight: 700; font-size: 13px; }
+.entry-date { font-size: 11px; color: #94a3b8; white-space: nowrap; }
+.entry-sub { font-size: 12px; color: #64748b; }
+.entry-desc { font-size: 12px; color: #475569; margin-top: 3px; line-height: 18px; }
+ul.bullets { margin: 4px 0 0 16px; }
+ul.bullets li { font-size: 11.5px; color: #475569; margin-bottom: 2px; line-height: 17px; }
+.chip {
+  display: inline-block;
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 10px;
+  margin: 2px 3px;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+.skill-group { margin-bottom: 5px; }
+.skill-label { font-weight: 700; font-size: 11px; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; }
+.tech-stack { font-size: 10px; color: #3b82f6; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>{{NAME}}</h1>
+    <div class="headline">{{HEADLINE}}</div>
+    <div class="contact">{{CONTACT_LINE}}</div>
+  </div>
+  <div class="body-content">
+    {{SUMMARY_SECTION}}
+    {{SKILLS_SECTION}}
+    {{PROJECTS_SECTION}}
+    {{EXPERIENCE_SECTION}}
+    {{EDUCATION_SECTION}}
+    {{CERTIFICATIONS_SECTION}}
+    {{ACHIEVEMENTS_SECTION}}
+  </div>
+</div>
+</body>
+</html>

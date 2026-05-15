@@ -18,8 +18,7 @@ Build an intelligent skill gap detection and career readiness platform that take
 https://github.com/johniton/hustlr.git
 
 ## Demo Video
-//todo
-https://youtube.com/...
+https://youtu.be/07hdUc7fzw4?si=I3VyofwjvWl69LFq
 
 ## Presentation Link
 https://drive.google.com/file/d/1ArRSYVB3ui5poQdOM-pwHwkgSiSDGDdR/view?usp=sharing

@@ -1,0 +1,41 @@
+# General
+.DS_Store
+*.log
+*.sqlite3
+
+# Ext-Codes (Reference material)
+ext-codes/
+
+# Backend (Python/FastAPI)
+backend/.venv/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/.pytest_cache/
+backend/interview/uploads/
+backend/**/.env
+
+# Frontend (Flutter/Dart)
+frontend/hustlr/.dart_tool/
+frontend/hustlr/.flutter-plugins
+frontend/hustlr/.flutter-plugins-dependencies
+frontend/hustlr/.pub-cache/
+frontend/hustlr/.pub/
+frontend/hustlr/build/
+frontend/hustlr/ios/Pods/
+frontend/hustlr/ios/.symlinks/
+frontend/hustlr/ios/Flutter/Flutter.framework
+frontend/hustlr/ios/Flutter/Flutter.podspec
+frontend/hustlr/android/app/build/
+frontend/hustlr/android/.gradle/
+frontend/hustlr/android/local.properties
+frontend/hustlr/windows/flutter/ephemeral/
+frontend/hustlr/macos/Flutter/ephemeral/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.iml
+
+# App Config
+frontend/hustlr/lib/config.dart
